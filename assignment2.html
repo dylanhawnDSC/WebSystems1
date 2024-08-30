@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My DSC Webpage</title>
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <script src="script.js?v=1.1"></script>
+    <style>
+        html, body {
+            height: 100%; /* Ensure the body takes up the full height */
+            margin: 0; /* Remove default margin */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; /* Stack child elements vertically */
+        }
+
+        header {
+            background: #007BFF; /* Modern Soft Blue */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #0056b3; /* Darker blue text color on hover */
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            padding: 10px 0;
+            z-index: 1000; /* Ensure dropdown is above other content */
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            display: block;
+            margin: 0;
+        }
+
+        nav ul li ul li a {
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li ul li a:hover {
+            color: #007BFF; /* Change text color on hover */
+        }
+
+        section {
+            flex: 1; /* Allow the section to take up remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 20px; /* Space for footer */
+        }
+
+        img {
+            max-width: 80%; /* Make the image smaller */
+            max-height: 60vh; /* Adjust as needed to fit content */
+            width: auto; /* Maintain aspect ratio */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow increase */
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.875rem;
+            border-top: 1px solid #444;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+    </style>
+    <script>
+        var images = ["images/MKD.jpeg", "images/MK.jpeg"];
+        var currentIndex = 0;
+
+        function switchImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById("slideshow").src = images[currentIndex];
+        }
+
+        window.onload = function() {
+            setInterval(switchImage, 10000); // 10 seconds
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Assignment 2</h1>
+		<nav>
+            <ul>
+                <li><a href="#assignments">My Assignments</a>
+                    <ul>
+                        <li><a href="assignment1.html">Assignment 1</a></li>
+                        <li><a href="assignment2.html">Assignment 2</a></li>
+                        <li><a href="assignment3.html">Assignment 3</a></li>
+                        <li><a href="assignment4.html">Assignment 4</a></li>
+                        <li><a href="assignment5.html">Assignment 5</a></li>
+                        <li><a href="assignment6.html">Assignment 6</a></li>
+                        <li><a href="assignment7.html">Assignment 7</a></li>
+                        <li><a href="assignment8.html">Assignment 8</a></li>
+                        <li><a href="assignment9.html">Assignment 9</a></li>
+                        <li><a href="assignment10.html">Assignment 10</a></li>
+                        <li><a href="assignment11.html">Assignment 11</a></li>
+                        <li><a href="assignment12.html">Assignment 12</a></li>
+                        <li><a href="assignment13.html">Assignment 13</a></li>
+                        <li><a href="assignment14.html">Assignment 14</a></li>
+                        <li><a href="assignment15.html">Assignment 15</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.web.com/blog/know-how-to-build-website/">My Favorite Site</a></li>
+                <li><a href="https://news.ycombinator.com/newest">Programming Articles</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+	<section>
+        <h2>this is a site for the COP4813 class where you will be demonstrating your web programming.</h2>
+    </section>
+    
+    <footer>
+        Created by Dylan Hawn COP4813
+    </footer>
+</body>
+</html>
+
